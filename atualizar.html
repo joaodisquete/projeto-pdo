@@ -2,10 +2,38 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <style>
+    /* Estilo do fundo fora da página */
+    html {
+      background-color: #e9ecef; 
+    }
+
+    /* Estilo do corpo da página centralizado e com bordas */
+    body {
+      max-width: 960px;          /* Define a largura máxima da página */
+      min-height: 100vh;         /* Garante que ocupe a altura inteira da tela */
+      margin: 0 auto;            /* Centraliza horizontalmente */
+      padding: 20px;             /* Espaço interno para o texto não colar na borda */
+      background-color: #ffffff; /* Fundo branco para a área principal */
+      border: 2px solid #333333; /* Borda em volta de toda a página */
+      box-sizing: border-box;    /* Evita que a borda e o padding estiquem a largura */
+    }
+    </style>
     <title>Atualizar E-mail do Aluno</title>
+    
 </head>
 <body>
-
+    <div class="container"> 
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"> 
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"> 
+                <svg class="bi me-2" width="40" height="32" aria-hidden="true"><use xlink:href="#bootstrap"></use></svg> 
+                <span class="fs-4">Escola Jacinto Aquinas Costa</span> </a> 
+                <ul class="nav nav-pills"> 
+                    <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Início</a></li> 
+                </ul> 
+        </header> 
+</div>
     <h1>Atualizar E-mail do Aluno</h1>
 
     <!--
@@ -22,12 +50,12 @@
             O ID indica QUAL aluno será alterado.
             No PHP, ele será usado no WHERE:  $_POST['id']
         -->
-        <label for="id">ID do aluno:</label><br>
+        <label for="id" class="input-group-text" id="inputGroup-sizing-lg">ID do aluno:</label><br>
         <input type="number" id="id" name="id" min="1" required>
         <br><br>
 
         <!-- Novo e-mail que substituirá o antigo: $_POST['email'] -->
-        <label for="email">Novo e-mail:</label><br>
+        <label for="email" class="input-group-text" id="inputGroup-sizing-lg">Novo e-mail:</label><br>
         <input type="email" id="email" name="email" required>
         <br><br>
 
@@ -37,7 +65,7 @@
     </form>
 
     <br>
-    <a href="index.html">Voltar ao menu</a>
+
 
 </body>
 </html>

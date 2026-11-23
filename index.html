@@ -2,10 +2,36 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <style>
+    /* Estilo do fundo fora da página */
+    html {
+      background-color: #e9ecef; 
+    }
+
+    /* Estilo do corpo da página centralizado e com bordas */
+    body {
+      max-width: 960px;          /* Define a largura máxima da página */
+      min-height: 100vh;         /* Garante que ocupe a altura inteira da tela */
+      margin: 0 auto;            /* Centraliza horizontalmente */
+      padding: 20px;             /* Espaço interno para o texto não colar na borda */
+      background-color: #ffffff; /* Fundo branco para a área principal */
+      border: 2px solid #333333; /* Borda em volta de toda a página */
+      box-sizing: border-box;    /* Evita que a borda e o padding estiquem a largura */
+    }
+    
+    </style>
     <title>Sistema Escola</title>
 </head>
 <body>
+    <div class="container"> 
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"> 
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"> 
+                <svg class="bi me-2" width="40" height="32" aria-hidden="true"><use xlink:href="#bootstrap"></use></svg> 
+                <span class="fs-4">Escola Jacinto Aquinas Costa</span> </a> 
 
+        </header> 
+</div>
     <h1>Sistema Escola</h1>
 
     <!--
@@ -17,10 +43,10 @@
           Cada formulário, por sua vez, chama o seu arquivo PHP.
     -->
     <ul>
-        <li><a href="cadastrar.html">Cadastrar aluno</a></li>
-        <li><a href="listar.html">Listar alunos</a></li>
-        <li><a href="atualizar.html">Atualizar e-mail</a></li>
-        <li><a href="excluir.html">Excluir aluno</a></li>
+        <li><a href="cadastrar.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Cadastrar Aluno</a></li>
+        <li><a href="listar.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Listar alunos</a></li>
+        <li><a href="atualizar.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Atualizar e-mail</a></li>
+        <li><a href="excluir.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Excluir aluno</a></li>
     </ul>
 
 </body>
