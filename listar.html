@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Alunos</title>
+</head>
+<body>
+
+    <h1>Listar Alunos</h1>
+
+    <!--
+        FORMULÁRIO DE LISTAGEM (READ)
+
+        action="listar.php" -> AQUI é a chamada do arquivo PHP.
+                               Ao clicar no botão, o navegador abre o
+                               listar.php, que busca os alunos no banco
+                               e mostra todos na tela.
+
+        method="GET"        -> Para apenas CONSULTAR dados usamos GET.
+                               (POST fica para cadastrar, atualizar e excluir.)
+
+        Repare que NÃO há campos (<input>): o listar.php não precisa
+        receber nenhuma informação, ele só lê a tabela alunos.
+    -->
+    <form action="listar.php" method="GET">
+
+        <!-- Botão que envia o formulário para o arquivo indicado no action -->
+        <button type="submit">Listar todos os alunos</button>
+
+    </form>
+
+    <br>
+    <a href="index.html">Voltar ao menu</a>
+
+</body>
+</html>

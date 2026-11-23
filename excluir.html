@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Excluir Aluno</title>
+</head>
+<body>
+
+    <h1>Excluir Aluno</h1>
+
+    <!--
+        FORMULÁRIO DE EXCLUSÃO (DELETE)
+
+        action="excluir.php" -> AQUI é a chamada do arquivo PHP.
+                                Os dados são enviados para excluir.php.
+
+        method="POST"        -> Envia os dados sem mostrá-los na URL.
+                                (Para apagar dados, sempre prefira POST.)
+    -->
+    <form action="excluir.php" method="POST">
+
+        <!--
+            Só precisamos do ID: ele diz QUAL aluno será apagado.
+            No PHP:  $_POST['id']
+        -->
+        <label for="id">ID do aluno:</label><br>
+        <input type="number" id="id" name="id" min="1" required>
+        <br><br>
+
+        <!--
+            onclick="return confirm(...)" abre uma janela perguntando
+            "Tem certeza?". Se o usuário clicar em Cancelar,
+            o formulário NÃO é enviado.
+        -->
+        <button type="submit" onclick="return confirm('Tem certeza que deseja excluir este aluno?')">
+            Excluir
+        </button>
+
+    </form>
+
+    <br>
+    <a href="index.html">Voltar ao menu</a>
+
+</body>
+</html>

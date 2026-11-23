@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Atualizar E-mail do Aluno</title>
+</head>
+<body>
+
+    <h1>Atualizar E-mail do Aluno</h1>
+
+    <!--
+        FORMULÁRIO DE ATUALIZAÇÃO (UPDATE)
+
+        action="atualizar.php" -> AQUI é a chamada do arquivo PHP.
+                                  Os dados são enviados para atualizar.php.
+
+        method="POST"          -> Envia os dados sem mostrá-los na URL.
+    -->
+    <form action="atualizar.php" method="POST">
+
+        <!--
+            O ID indica QUAL aluno será alterado.
+            No PHP, ele será usado no WHERE:  $_POST['id']
+        -->
+        <label for="id">ID do aluno:</label><br>
+        <input type="number" id="id" name="id" min="1" required>
+        <br><br>
+
+        <!-- Novo e-mail que substituirá o antigo: $_POST['email'] -->
+        <label for="email">Novo e-mail:</label><br>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <!-- Botão que envia o formulário para o arquivo indicado no action -->
+        <button type="submit">Atualizar</button>
+
+    </form>
+
+    <br>
+    <a href="index.html">Voltar ao menu</a>
+
+</body>
+</html>

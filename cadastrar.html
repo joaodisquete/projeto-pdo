@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Aluno</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+    /* Estilo do fundo fora da página */
+    html {
+      background-color: #e9ecef; 
+    }
+
+    /* Estilo do corpo da página centralizado e com bordas */
+    body {
+      max-width: 960px;          /* Define a largura máxima da página */
+      min-height: 100vh;         /* Garante que ocupe a altura inteira da tela */
+      margin: 0 auto;            /* Centraliza horizontalmente */
+      padding: 20px;             /* Espaço interno para o texto não colar na borda */
+      background-color: #ffffff; /* Fundo branco para a área principal */
+      border: 2px solid #333333; /* Borda em volta de toda a página */
+      box-sizing: border-box;    /* Evita que a borda e o padding estiquem a largura */
+    }
+    </style>
+</head>
+    <div class="container"> 
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"> 
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"> 
+                <svg class="bi me-2" width="40" height="32" aria-hidden="true"><use xlink:href="#bootstrap"></use></svg> 
+                <span class="fs-4">Escola Jacinto Aquinas Costa</span> </a> 
+                <ul class="nav nav-pills"> 
+                    <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Início</a></li> 
+                </ul> 
+        </header> 
+</div>
+
+<body>
+
+    <h1>Cadastrar Aluno</h1>
+
+    <!--
+        FORMULÁRIO DE CADASTRO (CREATE)
+
+        action="inserir.php"  -> AQUI é a chamada do arquivo PHP.
+                                 Quando o botão for clicado, os dados são
+                                 enviados para o arquivo inserir.php.
+
+        method="POST"         -> Envia os dados de forma "escondida"
+                                 (não aparecem na barra de endereço).
+    -->
+    <form action="inserir.php" method="POST">
+
+        <!--
+            O atributo name="" é MUITO IMPORTANTE:
+            é ele que o PHP usa para pegar o valor digitado.
+            Exemplo no PHP:  $_POST['nome']
+        -->
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-lg">Nome:</span>
+            </div>
+            <input type="text" id="nome" name="nome" min="1" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+          </div>
+          <br><br>
+
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-lg">Email:</span>
+            </div>
+            <input type="email" id="email" name="email" min="1" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+          </div>
+          <br><br>
+
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-lg">Idade:</span>
+            </div>
+            <input type="number" id="idade" name="idade" min="1" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+          </div>
+          <br><br>
+
+        <!-- Botão que envia o formulário para o arquivo indicado no action -->
+        <button type="submit" class="btn btn-primary btn-lg">Cadastrar</button>
+
+
+    </form>
+
+    <br>
+    <a href="index.html">Voltar ao menu</a>
+
+</body>
+</html>
